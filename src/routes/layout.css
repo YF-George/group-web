@@ -1,0 +1,35 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+/* Screen Reader Only utility */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
+
+@layer components {
+	.custom-select {
+		@apply appearance-none bg-slate-800/40 border border-slate-700 text-slate-100 py-2 px-3 pr-10 rounded-md text-sm cursor-pointer;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 8l4 4 4-4'/></svg>");
+		background-repeat: no-repeat;
+		background-position: right 0.75rem center;
+		background-size: 1rem;
+	}
+	.custom-select:focus {
+		@apply ring-2 ring-sky-400/30 outline-none;
+	}
+	.custom-select::-ms-expand { display: none; }
+	.custom-select option { @apply bg-slate-900 text-slate-100; }
+	/* Vocation-specific option colors (may vary by OS/browser) */
+	.custom-select option.opt-tank { background-color: #f97316; color: #041014; }
+	.custom-select option.opt-heal { background-color: #34d399; color: #042014; }
+	.custom-select option.opt-dps  { background-color: #3b82f6; color: #041036; }
+}
