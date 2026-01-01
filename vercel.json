@@ -1,0 +1,17 @@
+{
+  "buildCommand": "pnpm run build",
+  "devCommand": "pnpm run dev",
+  "installCommand": "pnpm install",
+  "framework": "@sveltejs/kit",
+  "env": {
+    "VITE_PUBLIC_SUPABASE_URL": {
+      "description": "Your Supabase project URL"
+    },
+    "VITE_PUBLIC_SUPABASE_ANON_KEY": {
+      "description": "Your Supabase anonymous key"
+    },
+    "DATABASE_URL": {
+      "description": "Your PostgreSQL connection string"
+    }
+  }
+}
