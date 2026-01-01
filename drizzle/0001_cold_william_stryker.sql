@@ -1,7 +1,7 @@
 CREATE TABLE "admin_users" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"user_id" text NOT NULL,
-	"created_at" timestamp with time zone DEFAULT now()
+	"created_at" timestamptz DEFAULT now()
 );
 --> statement-breakpoint
 CREATE TABLE "audit_logs" (
@@ -11,7 +11,7 @@ CREATE TABLE "audit_logs" (
 	"table_name" text NOT NULL,
 	"record_id" integer,
 	"changes" text,
-	"timestamp" timestamp with time zone DEFAULT now()
+	"timestamp" timestamptz DEFAULT now()
 );
 --> statement-breakpoint
 CREATE TABLE "vocations" (
