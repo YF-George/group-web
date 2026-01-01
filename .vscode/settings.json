@@ -1,5 +1,15 @@
 {
 	"files.associations": {
 		"*.css": "tailwindcss"
-	}
+	},
+	"[sql]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[tsql]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"mssql.intellisense.enableIntelliSense": false,
+	"mssql.ignore": [
+		"drizzle/**/*.sql"
+	]
 }
