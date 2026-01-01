@@ -2,7 +2,7 @@
   "buildCommand": "pnpm run build",
   "devCommand": "pnpm run dev",
   "installCommand": "pnpm install",
-  "framework": "@sveltejs/kit",
+  "framework": "sveltekit",
   "env": {
     "VITE_PUBLIC_SUPABASE_URL": {
       "description": "Your Supabase project URL"
